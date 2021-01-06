@@ -1,0 +1,20 @@
+<div class="search_bar">
+  <input
+    type="text"
+    name="Search_term"
+    [(ngModel)]="currentTermValue"
+    value="{{ currentTermValue }}"
+  />
+
+  <div
+    #icon
+    [ngClass]="{
+      right_icon: iconRight === 'true',
+      left_icon: iconRight === 'false'
+    }"
+  >
+    <mat-icon>search</mat-icon>
+
+    <button type="submit" style="display: none"></button>
+  </div>
+</div>
